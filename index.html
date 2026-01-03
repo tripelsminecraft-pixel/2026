@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRIPELS | Официальный сайт киберспортивной команды Minecraft</title>
+<meta name="description" content="TRIPELS – киберспортивная команда по Minecraft. Узнай о наших игроках, матчах, событиях и подпишись на YouTube и VK.">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0a;
+  --green: #00ff88;
+  --purple: #8b5cf6;
+  --text: #ffffff;
+  --gray: #b5b5b5;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Montserrat', sans-serif; background:#0a0a0a; color:var(--text); overflow-x:hidden; }
+
+.hero {
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  overflow:hidden;
+}
+.hero::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background: url("https://i.imgur.com/Z6QK7jN.png");
+  opacity:0.05;
+  animation:movebg 60s linear infinite;
+  z-index:0;
+}
+@keyframes movebg { from {background-position:0 0;} to {background-position:1000px 1000px;} }
+.hero-content { position:relative; z-index:1; max-width:900px; }
+
+.hero h1 { font-family:'Orbitron', sans-serif; font-size:clamp(2.5rem,5vw,5rem); color:var(--green); text-shadow:0 0 20px var(--green); margin-bottom:20px; }
+.hero p { font-size:1.4rem; color:var(--gray); margin-bottom:40px; }
+.btn { display:inline-block; margin:10px; padding:16px 36px; border-radius:12px; font-weight:600; color:#000; background:linear-gradient(45deg,var(--green),var(--purple)); box-shadow:0 0 25px rgba(0,255,136,0.6); transition:0.3s; }
+.btn:hover { transform:scale(1.1); box-shadow:0 0 50px rgba(139,92,246,0.8); }
+
+/* Общие секции */
+section { padding:100px 20px; max-width:1400px; margin:auto; }
+h2 { font-family:'Orbitron', sans-serif; font-size:2.4rem; color:var(--purple); margin-bottom:40px; text-align:center; text-shadow:0 0 20px rgba(139,92,246,0.6);}
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
+.card { background:rgba(255,255,255,0.05); padding:25px; border-radius:16px; backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.1); transition:0.4s; }
+.card:hover { transform:translateY(-10px); box-shadow:0 0 35px rgba(0,255,136,0.5); }
+
+.contact { text-align:center; font-size:1.2rem; }
+footer { text-align:center; padding:40px; background:#050505; color:var(--gray); font-size:0.9rem; }
+
+/* Игроки с 3D эффектом */
+.players { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; margin-top:40px; perspective:1000px; }
+.player-card { background:rgba(255,255,255,0.05); border-radius:16px; padding:20px; text-align:center; border:1px solid rgba(255,255,255,0.1); transition:transform 0.5s, box-shadow 0.5s; transform-style:preserve-3d; }
+.player-card:hover { transform: rotateY(10deg) rotateX(5deg) translateZ(10px); box-shadow:0 0 40px rgba(0,255,136,0.6); }
+.player-card img { border-radius:50%; width:100px; height:100px; object-fit:cover; margin-bottom:10px; }
+
+/* Матчи */
+.match span { color:var(--green); }
+
+/* Адаптив */
+@media(max-width:768px){ .hero h1{font-size:2.2rem;} .btn{padding:12px 25px;} h2{font-size:2rem;} }
+@media(max-width:480px){ section{padding:50px 15px;} h2{font-size:1.6rem;} .hero p{font-size:1rem;} }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>TRIPELS — сила команды, дружбы и побед</h1>
+    <p>Официальный сайт киберспортивной команды Minecraft Esports</p>
+    <a class="btn" href="https://youtube.com/@TripelsMain" target="_blank">YouTube</a>
+    <a class="btn" href="https://vk.com/tripelsmain" target="_blank">VK</a>
+  </div>
+</div>
+
+<!-- О КОМАНДЕ -->
+<section>
+  <h2>О команде</h2>
+  <p style="color:var(--gray);max-width:900px;margin:auto;margin-bottom:40px;text-align:center;">
+    TRIPELS — это команда молодых талантливых игроков Minecraft Esports (9–14 лет), которые стремятся к победе, развивают свои навыки и поддерживают друг друга. Мы верим в командную работу, дружбу, доверие и честное соревнование.
+  </p>
+  <div class="cards">
+    <div class="card">🤝 Командная работа</div>
+    <div class="card">💚 Уважение и доверие</div>
+    <div class="card">🔥 Развитие и мотивация</div>
+    <div class="card">🏆 Стремление к победе</div>
+  </div>
+  <div class="card" style="margin-top:30px;">
+    <strong>Главный тренер:</strong> Владимир — наставник и стратег команды.<br>
+    Контакт: <strong>vladimirtripels@gmail.com</strong>
+  </div>
+</section>
+
+<!-- ЗАРПЛАТА -->
+<section>
+  <h2>Зарплата игроков</h2>
+  <p style="color:var(--gray);text-align:center;margin-bottom:30px;">
+    Игроки TRIPELS могут получать <strong>от 250 000 ₽ в месяц</strong>! Мы ценим талант и усердие каждого.
+  </p>
+</section>
+
+<!-- ИГРОКИ -->
+<section>
+  <h2>Игроки команды</h2>
+  <div class="players">
+    <div class="player-card">
+      <img src="https://i.pinimg.com/originals/13/27/31/132731e3dfae964c14620227c1a5007e.jpg" alt="Игрок 1">
+      ShadowBlade — Страйкер, 14 лет
+    </div>
+    <div class="player-card">
+      <img src="https://media.istockphoto.com/id/965503414/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%BC%D0%B0%D0%BB%D1%8C%D1%87%D0%B8%D0%BA-%D1%81-%D1%80%D1%8E%D0%BA%D0%B7%D0%B0%D0%BA%D0%BE%D0%BC.jpg?s=170667a&w=0&k=20&c=SK6SJzNgzn9OUauj2zo3f8Xmy5sQILiQL2XQ3wVci2E=" alt="Игрок 2">
+      BlockWizard — Строитель, 13 лет
+    </div>
+    <div class="player-card">
+      ??? — Секретный игрок, 11 лет. Возможно новый игрок, готовим на подписание.
+    </div>
+    <div class="player-card">
+      <img src="https://i.pinimg.com/736x/a0/8d/91/a08d91e49b1a4d42223e2b55290c6048.jpg" alt="Игрок 4">
+      RedCreeper — Оборона, 14 лет
+    </div>
+    <div class="player-card">
+      <img src="https://img.freepik.com/free-photo/handsome-boy-stylish-outfit-smiles-looks-camera-poses_132075-14690.jpg?semt=ais_items_boosted&w=740" alt="Игрок 5">
+      DiamondAce — Поддержка, 10 лет
+    </div>
+  </div>
+</section>
+
+<!-- МАТЧИ -->
+<section>
+  <h2>Матчи и события</h2>
+  <div class="cards">
+    <div class="card match">
+      📅 Ежемесячные матчи<br>
+      ▶ Трансляции и записи на <span>YouTube</span>
+    </div>
+    <div class="card match">
+      🎮 Minecraft Esports<br>
+      ⚡ Динамичные и зрелищные игры
+    </div>
+    <div class="card match">
+      🏆 Участие в турнирах<br>
+      🌐 Соревнования с командами со всего мира
+    </div>
+  </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section class="contact">
+  <h2>Контакты</h2>
+  <p>Главный тренер: <strong>vladimirtripels@gmail.com</strong></p>
+  <p>Почта команды: <strong>tripelsmain@gmail.com</strong></p>
+  <p>Социальные сети: 
+    <a href="https://youtube.com/@TripelsMain" style="color:var(--green);" target="_blank">YouTube</a> | 
+    <a href="https://vk.com/tripelsmain" style="color:var(--green);" target="_blank">VK</a>
+  </p>
+</section>
+
+<footer>
+  © 2026 TRIPELS | Minecraft Esports
+</footer>
+
+</body>
+</html>
