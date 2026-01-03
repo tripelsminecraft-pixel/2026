@@ -47,17 +47,12 @@ a{text-decoration:none;color:inherit;}
 }
 .hero h1{
   font-family:'Press Start 2P',monospace;
-  font-size:2rem;
+  font-size:4rem;
   color:var(--green);
-  text-shadow:0 0 10px var(--green),0 0 20px var(--green),0 0 40px var(--green);
   margin-bottom:20px;
   position:relative;
   z-index:1;
-  animation:glow-pulse 2s ease-in-out infinite;
-}
-@keyframes glow-pulse{
-  0%,100%{text-shadow:0 0 10px var(--green),0 0 20px var(--green),0 0 40px var(--green);}
-  50%{text-shadow:0 0 20px var(--green),0 0 40px var(--green),0 0 60px var(--green),0 0 80px var(--purple);}
+  letter-spacing:8px;
 }
 .hero p{color:var(--gray);margin-bottom:30px;position:relative;z-index:1;font-size:1.1rem;}
 .hero::after{
@@ -200,13 +195,16 @@ h2::after{
 footer{text-align:center;padding:30px;background:#050505;color:var(--gray);font-size:0.9rem;}
 
 /* Адаптив */
-@media(max-width:768px){.hero h1{font-size:1.5rem;}h2{font-size:1.5rem;}}
+@media(max-width:768px){
+  .hero h1{font-size:2.5rem;letter-spacing:4px;}
+  h2{font-size:1.5rem;}
+}
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <h1>⚔️ TRIPELS ⚔️</h1>
+  <h1>TRIPELS</h1>
   <p>🎮 Сила команды, дружбы и побед 🏆</p>
   <p style="color:var(--gray);position:relative;z-index:1;">Официальный сайт киберспортивной команды Minecraft Esports</p>
   <a class="btn" href="https://youtube.com/@TripelsMain" target="_blank">📺 YouTube</a>
@@ -231,7 +229,7 @@ footer{text-align:center;padding:30px;background:#050505;color:var(--gray);font-
   <div class="players">
     <div class="player-card" data-name="⚔️ AlexStorm" data-role="Страйкер" data-age="14" data-desc="Лидер команды, отличный стратег и атакующий игрок. 🎯">⚔️ AlexStorm<br><small>Страйкер, 14 лет</small></div>
     <div class="player-card" data-name="🧱 BlockMaster" data-role="Строитель" data-age="13" data-desc="Мастер строительства и защиты базы. 🏗️">🧱 BlockMaster<br><small>Строитель, 13 лет</small></div>
-    <div class="player-card" data-name="❓ ???" data-role="Секретный игрок" data-desc="Новый игрок, готовим к подписанию. 🤫">❓ ???<br><small>Секретный игрок</small></div>
+    <div class="player-card" data-name="⚡ ShadowNinja" data-role="Разведчик" data-age="15" data-desc="Быстрый и незаметный разведчик, собирает информацию о противниках. 🕵️">⚡ ShadowNinja<br><small>Разведчик, 15 лет</small></div>
     <div class="player-card" data-name="🛡️ RedCreeper" data-role="Оборона" data-age="14" data-desc="Защитник команды, отвечает за оборону базы. 💪">🛡️ RedCreeper<br><small>Оборона, 14 лет</small></div>
     <div class="player-card" data-name="💎 DiamondAce" data-role="Поддержка" data-age="12" data-desc="Помогает команде, восстанавливает ресурсы и поддерживает игроков. ⚡">💎 DiamondAce<br><small>Поддержка, 12 лет</small></div>
   </div>
